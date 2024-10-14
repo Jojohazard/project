@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Handle requests starting with 'api'
+RewriteCond %{REQUEST_URI} ^/api
+RewriteRule ^api/(.*)$ public/api/index.php [L]
+
+# Handle all other requests
+RewriteCond %{REQUEST_URI} !^/public/api/index.php$
+RewriteCond %{REQUEST_URI} !^/public/index.php$
+RewriteRule ^(.*)$ public/index.php [L]
