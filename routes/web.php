@@ -5,23 +5,19 @@ require_once __DIR__ . '/../src/resource-controller.php';
 $router = new Router();
 
 $router->get('/', function () {
-    $rc = new ResourceController();
-    $rc->getPage('home.html');
+    echo 'home';
 });
 
 $router->get('/reserve', function () {
-    $rc = new ResourceController();
-    $rc->getPage('reserve.html');
+    echo 'reserve';
 });
 
 $router->get('/contact', function () {
-    $rc = new ResourceController();
-    $rc->getPage('contact.html');
+    echo 'contact';
 });
 
 $router->get('/404', function () {
-    $rc = new ResourceController();
-    $rc->getPage('404.html');
+    echo '404';
 });
 
 return $router;
