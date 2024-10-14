@@ -7,7 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 if ($router->inRoutes($req, $method)) {
     call_user_func($router->getRoutes()[$req]->getHandler());
 } else {
-    header("HTTP/1.0 404 Not Found");
+    http_response_code(404);
     header("Location: /404");
     exit();
 }
