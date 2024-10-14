@@ -1,17 +1,15 @@
 <?php
-/*
-php 8.1
+// !!! php 8.1
 enum HTTPMethod {
     case GET;
     case POST;
 }
-*/
 class Route {
     private $endpoint;
     private $method;
     private $handler;
 
-    public function __construct(string $endpoint, string $method, callable $handler) {
+    public function __construct(string $endpoint, HTTPMethod $method, callable $handler) {
         $this->endpoint = $endpoint;
         $this->method = $method;
         $this->handler = $handler;
@@ -21,7 +19,7 @@ class Route {
         return $this->endpoint;
     }
 
-    public function getMethod(): string {
+    public function getMethod(): HTTPMethod {
         return $this->method;
     }
 

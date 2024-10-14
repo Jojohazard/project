@@ -5,7 +5,7 @@ class Router {
     private $routes = [];
 
     public function get(string $endpoint, callable $handler) {
-        $this->routes[$endpoint] = new Route($endpoint, 'GET', $handler);
+        $this->routes[$endpoint] = new Route($endpoint, HTTPMethod::GET, $handler);
     }
 
     public function hasRoutes(string $endpoint, string $method) {
