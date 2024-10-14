@@ -8,6 +8,5 @@ if ($router->hasRoutes($req, $method)) {
     call_user_func($router->getRoutes()[$req]->getHandler());
 } else {
     header("Location: /404");
-    header("HTTP/1.0 404 Not Found");
     exit();
 }

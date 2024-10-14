@@ -8,6 +8,5 @@ if ($router->inRoutes($req, $method)) {
     call_user_func($router->getRoutes()[$req]->getHandler());
 } else {
     header("Location: /404");
-    http_response_code(404);
     exit();
 }

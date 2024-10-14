@@ -17,6 +17,7 @@ $router->get('/contact', function () {
 });
 
 $router->get('/404', function () {
+    http_response_code(404);
     echo '404';
 });
 
