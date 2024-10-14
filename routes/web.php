@@ -16,10 +16,8 @@ $router->get('/contact', function () {
     echo 'contact';
 });
 
-/*
 $router->get('/404', function () {
     echo '404';
 });
-*/
 
 return $router;
