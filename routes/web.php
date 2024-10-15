@@ -9,6 +9,11 @@ $router->get('/', function () {
     $rc->getPage('home.html');
 });
 
+$router->get('/kapena', function () {
+    $rc = new ResourceController();
+    $rc->getPage('kapena.html');
+});
+
 $router->get('/reserve', function () {
     echo 'reserve';
 });
