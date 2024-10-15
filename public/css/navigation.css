@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    margin: auto 0 0 0;
+}
+
+.nav__list {
+    column-gap: 25px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__li {
+    display: flex;
+    font-size: 20px;
+}
+
+.nav__li a {
+    padding: 5px 10px;
+}
+
+.nav__li a:hover {
+    scale: 1.35;
+}
