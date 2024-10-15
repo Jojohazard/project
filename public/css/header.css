@@ -14,8 +14,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 200px;
+    transition: transform 0.6s;
 }
 
 .logo:hover {
-    scale: 1.2;
+    transform: scale(1.2);
 }
