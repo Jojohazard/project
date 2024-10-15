@@ -14,6 +14,16 @@ $router->get('/kapena', function () {
     $rc->getPage('kapena.html');
 });
 
+$router->get('/occhia', function () {
+    $rc = new ResourceController();
+    $rc->getPage('occhia.html');
+});
+
+$router->get('/the-lab', function () {
+    $rc = new ResourceController();
+    $rc->getPage('the-lab.html');
+});
+
 $router->get('/reserve', function () {
     echo 'reserve';
 });
