@@ -25,11 +25,13 @@ $router->get('/the-lab', function () {
 });
 
 $router->get('/reserve', function () {
-    echo 'reserve';
+    $rc = new ResourceController();
+    $rc->getPage('reserve.html');
 });
 
 $router->get('/contact', function () {
-    echo 'contact';
+    $rc = new ResourceController();
+    $rc->getPage('contact.html');
 });
 
 $router->get('/404', function () {
