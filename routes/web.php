@@ -5,7 +5,8 @@ require_once __DIR__ . '/../src/resource-controller.php';
 $router = new Router();
 
 $router->get('/', function () {
-    echo 'home';
+    $rc = new ResourceController();
+    $rc->getPage('home.html');
 });
 
 $router->get('/reserve', function () {

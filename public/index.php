@@ -7,6 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 if ($router->hasRoutes($req, $method)) {
     call_user_func($router->getRoutes()[$req]->getHandler());
 } else {
-    header('Location: /404', false , 302);
+    // no redirect
+    header('Location: /404');
     exit();
 }
